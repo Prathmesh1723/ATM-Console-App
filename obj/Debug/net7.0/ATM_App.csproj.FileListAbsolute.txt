@@ -1,0 +1,5 @@
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.csproj.AssemblyReference.cache
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.AssemblyInfoInputs.cache
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.AssemblyInfo.cs
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.csproj.CoreCompileInputs.cache

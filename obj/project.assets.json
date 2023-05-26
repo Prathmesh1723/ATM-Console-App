@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prath\\Desktop\\Masters in IS material\\ATM_App\\ATM_App.csproj",
+      "projectUniqueName": "C:\\Users\\prath\\Desktop\\Masters in IS material\\ATM-Console-App\\ATM_App.csproj",
       "projectName": "ATM_App",
-      "projectPath": "C:\\Users\\prath\\Desktop\\Masters in IS material\\ATM_App\\ATM_App.csproj",
+      "projectPath": "C:\\Users\\prath\\Desktop\\Masters in IS material\\ATM-Console-App\\ATM_App.csproj",
       "packagesPath": "C:\\Users\\prath\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prath\\Desktop\\Masters in IS material\\ATM_App\\obj\\",
+      "outputPath": "C:\\Users\\prath\\Desktop\\Masters in IS material\\ATM-Console-App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\prath\\AppData\\Roaming\\NuGet\\NuGet.Config"

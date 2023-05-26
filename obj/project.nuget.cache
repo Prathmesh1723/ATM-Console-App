@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bDBaZnbmVyca5omi3dmgmXZwP0EzwNG30JulpKwM2KIPCRix5HEcw7KF9UDLQEFZDN51jpbnsp55JcRFnhqCUg==",
+  "dgSpecHash": "zT9yJCFVcH0Hqh4DOeX4IZHcVRcru2UIX8nxHiebgtkF9ZXXv8NfsL2fdBtdgzM11Kw5nk9fsPqjCkVQe+Qi1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\prath\\Desktop\\Masters in IS material\\ATM_App\\ATM_App.csproj",
+  "projectFilePath": "C:\\Users\\prath\\Desktop\\Masters in IS material\\ATM-Console-App\\ATM_App.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
