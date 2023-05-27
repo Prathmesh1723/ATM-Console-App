@@ -59,7 +59,8 @@ public class accountHolder{
             Console.WriteLine("1. Deposit");
             Console.WriteLine("2. Withdraw");
             Console.WriteLine("3. Show Balance");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. Create Account");
+            Console.WriteLine("5. Exit");
         }
 
         void deposit(accountHolder accountUser){
@@ -96,6 +97,87 @@ public class accountHolder{
     accountHolders.Add(new accountHolder("4561237890456", 3333, "Mike", "Johnson", 750.20));
     accountHolders.Add(new accountHolder("7890123456789", 4444, "Emily", "Davis", 300.10));
     accountHolders.Add(new accountHolder("6543210987654", 5555, "Alex", "Anderson", 1000.00));
+
+    void createAccount(List<accountHolder> accountHolders){
+        Console.WriteLine("Please enter the following information to create a new account:");
+
+        Console.WriteLine("Card Number (12 digits): ");
+        string cardNo = "";
+        while (true)
+        {
+            cardNo = Console.ReadLine();
+            if (cardNo.Length != 12)
+            {
+                Console.WriteLine("Invalid card number. Please enter a 12-digit card number:");
+            }
+            else if (!cardNo.All(char.IsDigit))
+            {
+                Console.WriteLine("Invalid card number. Please enter a numeric value:");
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        Console.WriteLine("PIN (4 digits): ");
+        int pin = 0;
+        while (true)
+        {
+            string pinString = Console.ReadLine();
+            if (pinString.Length != 4)
+            {
+                Console.WriteLine("Invalid PIN. Please enter a 4-digit PIN:");
+            }
+            else if (!pinString.All(char.IsDigit))
+            {
+                Console.WriteLine("Invalid PIN. Please enter a numeric value:");
+            }
+            else
+            {
+                pin = int.Parse(pinString);
+                break;
+            }
+        }
+
+        Console.WriteLine("First Name: ");
+        string firstName = "";
+        while (true)
+        {
+            firstName = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(firstName))
+            {
+                Console.WriteLine("Invalid first name. Please enter a non-empty value:");
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        Console.WriteLine("Last Name: ");
+        string lastName = "";
+        while (true)
+        {
+            lastName = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(lastName))
+            {
+                Console.WriteLine("Invalid last name. Please enter a non-empty value:");
+            }
+            else
+            {
+                break;
+            }
+    }
+
+    Console.WriteLine("Initial Balance: ");
+    double initialBalance = double.Parse(Console.ReadLine());
+
+    accountHolder newAccount = new accountHolder(cardNo, pin, firstName, lastName, initialBalance);
+    accountHolders.Add(newAccount);
+
+    Console.WriteLine("Account created successfully!");
+}
 
     Console.WriteLine("Welcome to My ATM");
     Console.WriteLine("Please insert your debit card: ");
@@ -153,9 +235,10 @@ public class accountHolder{
             if(option == 1) { deposit(accountUser); }
             else if(option == 2) { withdraw(accountUser); }
             else if(option == 3) { balance(accountUser); }
-            else if(option == 4) { break; }
+            else if(option == 4) { createAccount(accountHolders); }
+            else if(option == 5) { break; }
             else { option = 0; }
-        }while(option != 4);
+        }while(option != 5);
         Console.WriteLine("Thank you! Have a nice day :)");
     }
 }
