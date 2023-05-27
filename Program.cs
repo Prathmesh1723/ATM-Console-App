@@ -1,4 +1,4 @@
-﻿Using System;
+﻿using System;
 
 public class accountHolder{
     String cardNo, firstName, lastName;
@@ -65,7 +65,7 @@ public class accountHolder{
         void deposit(accountHolder accountUser){
              Console.WriteLine("Please enter the amount you wish to deposit :");
              double deposit = double.Parse(Console.ReadLine());
-             accountUser.setBalance(deposit);
+             accountUser.setBalance(accountUser.getBalance() + deposit);
              Console.WriteLine("Thank you for depositing your money! Your new account Balance is: " + accountUser.getBalance());
         }
 
@@ -74,7 +74,7 @@ public class accountHolder{
             double withdrawal = Double.Parse(Console.ReadLine());
 
             //Check if the use r has enough money
-            if(accountUser.getBalance() > withdrawal){
+            if(accountUser.getBalance() < withdrawal){
                 Console.WriteLine("Insufficient Balance :( ");
             }
             else
@@ -129,7 +129,7 @@ public class accountHolder{
         {
             try
             {
-                userPin = Int.Parse(Console.ReadLine());
+                userPin = int.Parse(Console.ReadLine());
                 if(accountUser.getPin() == userPin){
                     break;
                 }
@@ -138,7 +138,7 @@ public class accountHolder{
                 }
         }
         catch{
-            Console.WriteLine("incorrectpin. Please try again");
+            Console.WriteLine("incorrect pin. Please try again");
         }
         }
 
@@ -153,10 +153,9 @@ public class accountHolder{
             if(option == 1) { deposit(accountUser); }
             else if(option == 2) { withdraw(accountUser); }
             else if(option == 3) { balance(accountUser); }
-            else if(option == 2) { break; }
+            else if(option == 4) { break; }
             else { option = 0; }
-        }
-        while(option != 4);
+        }while(option != 4);
         Console.WriteLine("Thank you! Have a nice day :)");
     }
 }

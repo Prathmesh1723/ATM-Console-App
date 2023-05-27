@@ -3,3 +3,13 @@ C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\A
 C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.AssemblyInfoInputs.cache
 C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.AssemblyInfo.cs
 C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.csproj.CoreCompileInputs.cache
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\bin\Debug\net7.0\ATM_App.exe
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\bin\Debug\net7.0\ATM_App.deps.json
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\bin\Debug\net7.0\ATM_App.runtimeconfig.json
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\bin\Debug\net7.0\ATM_App.dll
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\bin\Debug\net7.0\ATM_App.pdb
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.dll
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\refint\ATM_App.dll
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.pdb
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ATM_App.genruntimeconfig.cache
+C:\Users\prath\Desktop\Masters in IS material\ATM-Console-App\obj\Debug\net7.0\ref\ATM_App.dll
