@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text.Json;
 
 public class accountHolder{
     String cardNo, firstName, lastName;
@@ -86,7 +89,64 @@ public class accountHolder{
     }
 
     void balance(accountHolder accountUser){
-        Console.WriteLine("Current Balance : " + accountUser.getBalance());
+        Console.WriteLine("Get balance in which currency : ");
+        string currency = Console.ReadLine();
+        double rate = Decimal.ToDouble(GetExchangeRate(currency));
+        if(currency == "USD"){
+            Console.WriteLine("Current Balance : " + accountUser.getBalance() + " USD");
+        }else{
+            Console.WriteLine("Current Balance : " + Math.Round((rate*accountUser.getBalance()),2) + " " + currency);
+        }
+    }
+
+    decimal GetExchangeRate(string currency)
+    {
+        // Replace 'YOUR_API_KEY' with your actual Open Exchange Rates API key
+        string apiKey = "c40122d3288749ffbc0c423b19cc8b08";
+
+        // Specify the base currency and target currency you want to get the exchange rate for
+        string baseCurrency = "USD";
+        string targetCurrency = "EUR";
+
+        // Construct the API URL with the base currency, target currency, and API key
+        string apiUrl = $"https://openexchangerates.org/api/latest.json?base={baseCurrency}&symbols={currency}&app_id={apiKey}";
+
+        using (HttpClient client = new HttpClient())
+        {
+            try
+            {
+                // Send the HTTP GET request to the API
+                HttpResponseMessage response = client.GetAsync(apiUrl).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // Read the response content as a string
+                    string responseContent = response.Content.ReadAsStringAsync().Result;
+
+                    // Parse the JSON response into a JObject
+                    var jsonData = JsonDocument.Parse(responseContent);
+
+                    // Extract the exchange rate from the JSON data
+                    decimal exchangeRate = jsonData.RootElement
+                        .GetProperty("rates")
+                        .GetProperty(currency)
+                        .GetDecimal();
+
+                    // Print the exchange rate
+                    Console.WriteLine($"1 {baseCurrency} = {exchangeRate} {currency}");
+                    return exchangeRate;
+                }
+                else
+                {
+                    Console.WriteLine($"Failed to retrieve exchange rate. StatusCode: {response.StatusCode}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+            return 0;
+        }
     }
 
     //Account Holders list or Testing
@@ -179,6 +239,7 @@ public class accountHolder{
     Console.WriteLine("Account created successfully!");
 }
 
+    
     Console.WriteLine("Welcome to My ATM");
     Console.WriteLine("Please insert your debit card: ");
     String debitCardNum = "";
